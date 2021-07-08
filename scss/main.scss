@@ -1,0 +1,258 @@
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 15px;
+        box-sizing: border-box;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+    
+    @mixin flex_col_main {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    @mixin flex_col_box {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    
+    @mixin flex_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    
+    $box_1:hsl(31,
+    77%,
+    52%);
+    $box_2:hsl(184,
+    100%,
+    22%);
+    $box_3:hsl(179,
+    100%,
+    13%);
+    $para_color:hsla(0,
+    0%,
+    100%,
+    0.75);
+    $main_color: hsl(0,
+    0%,
+    95%);
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        background-color: $main_color;
+        @include flex_row;
+        .main_box {
+            width: 60%;
+            height: 60vh;
+            margin: auto;
+            @include flex_row;
+            border-radius: 10px;
+            .box {
+                @include flex_col_box;
+                height: 100%;
+            }
+            #box_1 {
+                background: $box_1;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+                padding: 0 2rem;
+                img {
+                    // margin: 2rem 0;
+                }
+                h1 {
+                    font-family: 'Big Shoulders Display', cursive;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $main_color;
+                    // margin: 2rem 0;
+                }
+                p {
+                    color: $para_color !important;
+                    font-weight: 400;
+                    // margin: 2rem 0;
+                }
+                button {
+                    background: $main_color;
+                    border: none;
+                    border-radius: 20px;
+                    padding: 1rem;
+                    color: $box_1;
+                    cursor: pointer;
+                    // margin: 2rem 0;
+                }
+            }
+            #box_2 {
+                background: $box_2;
+                padding: 0 2rem;
+                img {
+                    // margin: 2rem 0;
+                }
+                h1 {
+                    font-family: 'Big Shoulders Display', cursive;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $main_color;
+                    // margin: 2rem 0;
+                }
+                p {
+                    color: $para_color !important;
+                    font-weight: 400;
+                    // margin: 2rem 0;
+                }
+                button {
+                    background: $main_color;
+                    border: none;
+                    border-radius: 20px;
+                    padding: 1rem;
+                    color: $box_2;
+                    cursor: pointer;
+                    // margin: 2rem 0;
+                }
+            }
+            #box_3 {
+                background: $box_3;
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+                padding: 0 2rem;
+                img {
+                    // margin: 2rem 0;
+                }
+                h1 {
+                    font-family: 'Big Shoulders Display', cursive;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $main_color;
+                    // margin: 2rem 0;
+                }
+                p {
+                    color: $para_color !important;
+                    font-weight: 400;
+                    // margin: 2rem 0;
+                }
+                button {
+                    background: $main_color;
+                    border: none;
+                    border-radius: 20px;
+                    padding: 1rem 1.5rem;
+                    color: $box_3;
+                    cursor: pointer;
+                    // margin: 2rem 0;
+                }
+            }
+        }
+    }
+    
+    @media (max-width:500px) {
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            height: 100%;
+            background-color: $main_color;
+            @include flex_row;
+            .main_box {
+                width: 60%;
+                height: 60vh;
+                margin: auto;
+                @include flex_col_main;
+                border-radius: 10px;
+                .box {
+                    @include flex_col_box;
+                    padding: 2rem 2rem !important;
+                    height: 470px !important;
+                }
+                #box_1 {
+                    background: $box_1;
+                    border-bottom-left-radius: 0px;
+                    border-top-left-radius: 0px;
+                    padding: 2rem 2rem;
+                    h1 {
+                        font-family: 'Big Shoulders Display', cursive;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $main_color;
+                        // margin: 2rem 0;
+                    }
+                    p {
+                        color: $para_color !important;
+                        font-weight: 400;
+                        // margin: 2rem 0;
+                    }
+                    button {
+                        background: $main_color;
+                        border: none;
+                        border-radius: 20px;
+                        padding: 1rem;
+                        color: $box_1;
+                        cursor: pointer;
+                        // margin: 2rem 0;
+                    }
+                }
+                #box_2 {
+                    background: $box_2;
+                    padding: 0 2rem;
+                    h1 {
+                        font-family: 'Big Shoulders Display', cursive;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $main_color;
+                        // margin: 2rem 0;
+                    }
+                    p {
+                        color: $para_color !important;
+                        font-weight: 400;
+                        // margin: 2rem 0;
+                    }
+                    button {
+                        background: $main_color;
+                        border: none;
+                        border-radius: 20px;
+                        padding: 1rem;
+                        color: $box_2;
+                        cursor: pointer;
+                        // margin: 2rem 0;
+                    }
+                }
+                #box_3 {
+                    background: $box_3;
+                    border-bottom-right-radius: 0px;
+                    border-top-right-radius: 0px;
+                    h1 {
+                        font-family: 'Big Shoulders Display', cursive;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $main_color;
+                        // margin: 2rem 0;
+                    }
+                    p {
+                        color: $para_color !important;
+                        font-weight: 400;
+                        // margin: 2rem 0;
+                    }
+                    button {
+                        background: $main_color;
+                        border: none;
+                        border-radius: 20px;
+                        padding: 1rem 1.5rem;
+                        color: $box_3;
+                        cursor: pointer;
+                        // margin: 2rem 0;
+                    }
+                }
+            }
+        }
+    }
